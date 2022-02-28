@@ -3,6 +3,6 @@ import userCtrl from '../controllers/userController';
 
 const router = express.Router();
 
-router.route('/login').post(userCtrl.login);
+router.route('/profile').post(userCtrl.profile);
 
 export default router;

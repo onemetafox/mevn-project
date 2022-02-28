@@ -1,11 +1,19 @@
 <template>
-  <div class="col-md-12">
+  <div class="d-flex justify-content-center h-100">
     <div class="card card-container">
       <img
         id="profile-img"
         src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"
         class="profile-img-card"
+        style="width:390px; height:390px"
       />
+      <div
+        v-if="message"
+        class="alert"
+        :class="successful ? 'alert-success' : 'alert-danger'"
+      >
+        {{ message }}
+      </div>
       <Form @submit="handleRegister" :validation-schema="schema">
         <div v-if="!successful">
           <div class="form-group">
@@ -34,13 +42,7 @@
           </div>
         </div>
       </Form>
-      <div
-        v-if="message"
-        class="alert"
-        :class="successful ? 'alert-success' : 'alert-danger'"
-      >
-        {{ message }}
-      </div>
+      
     </div>
   </div>
 </template>
