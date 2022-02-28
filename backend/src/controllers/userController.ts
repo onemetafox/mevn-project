@@ -5,7 +5,7 @@ import {Request, Response, NextFunction} from "express";
 
 export default class UserController
 {
-    public static async login(req:Request, res: Response, next: Function ){
+    public static profile(req:Request, res: Response, next: Function ){
         try{
 
         }catch(e){
